@@ -3,17 +3,17 @@
 
 namespace App;
 
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class CarBrand extends Authenticatable
+class CarBrand extends Model
 {
     use Notifiable;
 
 
     protected $fillable = [
-        'id', 'make', 'model', 'year'
+        'make', 'model', 'year'
     ];
 
 
@@ -23,7 +23,7 @@ class CarBrand extends Authenticatable
 
 
     protected $casts = [
-//
+        //
     ];
 
 }
